@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% from 'bootstrap5/utils.html'  import render_static %}
+    {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Varela+Round&display=swap" rel="stylesheet">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+            {{ render_static("css", "css/styles.css") }}
+        {% endblock %}
+
+        <title>{% block title %}Your page title{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+</body>
+</html>
